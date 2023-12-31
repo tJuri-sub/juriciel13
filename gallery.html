@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juriciel</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .row {
+            display: -ms-flexbox; /* IE 10 */
+            display: flex;
+            -ms-flex-wrap: wrap; /* IE 10 */
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+        
+        /* Create two equal columns that sits next to each other */
+        .column {
+            -ms-flex: 50%; /* IE 10 */
+            flex: 50%;
+            padding: 0 4px;
+        }
+        
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+            border-radius: 10px;
+        
+        }
+
+        .gallery{
+            margin: 0px;
+            padding:10px;
+        }
+
+        .Btns{
+          display: flex;
+            align-items: center;
+            justify-content: center;
+          margin: 20px;
+        }
+
+        .btn {
+        border: none;
+        outline: none;
+        padding: 10px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+        font-size: 18px;
+        color: #666;
+        }
+
+        .btn:hover {
+        background-color: #ddd;
+        }
+
+        .btn.active {
+        background-color: #666;
+        color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="head">
+        <div class="container">
+            <h1>Juriciel</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="letter.html">Letter</a></li>
+                    <li><a href="#">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="Btns" id="myHeader">
+        <button class="btn" onclick="one()">1</button>
+        <button class="btn active" onclick="two()">2</button>
+        <button class="btn" onclick="four()">4</button>
+    </section>
+
+    <section class="gallery">
+        <div class="row">
+            <div class="column">
+                <img src="img/p1.jpg" alt="">
+                <img src="img/p2.jpg" alt="">
+                <img src="img/p3.jpg" alt="">
+                <img src="img/p4.jpg" alt="">
+                <img src="img/p5.jpg" alt="">
+                <img src="img/p6.jpg" alt="">
+                <img src="img/p7.jpg" alt="">
+                <img src="img/p29.jpg" alt="">
+                <img src="img/p30.jpg" alt="">
+                <img src="img/p34.jpg" alt="">
+            </div>
+            <div class="column">
+                <img src="img/p8.jpg" alt="">
+                <img src="img/p9.jpg" alt="">
+                <img src="img/p10.webp" alt="">
+                <img src="img/p11.jpg" alt="">
+                <img src="img/p12.jpg" alt="">
+                <img src="img/p13.jpg" alt="">
+                <img src="img/p14.jpg" alt="">
+                <img src="img/p33.jpg" alt="">
+            </div>
+            <div class="column">
+                <img src="img/p15.jpg" alt="">
+                <img src="img/p16.jpg" alt="">
+                <img src="img/p17.jpg" alt="">
+                <img src="img/p18.jpg" alt="">
+                <img src="img/p19.jpg" alt="">
+                <img src="img/p20.jpg" alt="">
+                <img src="img/p21.jpg" alt="">
+                <img src="img/p31.jpg" alt="">
+                <img src="img/p37.jpg" alt="">
+                <img src="img/p36.jpg" alt="">
+            </div>
+            <div class="column">
+                <img src="img/p22.jpg" alt="">
+                <img src="img/p23.jpg" alt="">
+                <img src="img/p24.jpg" alt="">
+                <img src="img/p25.jpg" alt="">
+                <img src="img/p26.jpg" alt="">
+                <img src="img/p27.jpg" alt="">
+                <img src="img/p28.jpg" alt="">
+                <img src="img/p32.jpg" alt="">
+                <img src="img/p35.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Get the elements with class="column"
+        var elements = document.getElementsByClassName("column");
+        
+        // Declare a loop variable
+        var i;
+        
+        // Full-width images
+        function one() {
+            for (i = 0; i < elements.length; i++) {
+            elements[i].style.msFlex = "100%";  // IE10
+            elements[i].style.flex = "100%";
+          }
+        }
+        
+        // Two images side by side
+        function two() {
+          for (i = 0; i < elements.length; i++) {
+            elements[i].style.msFlex = "50%";  // IE10
+            elements[i].style.flex = "50%";
+          }
+        }
+        
+        // Four images side by side
+        function four() {
+          for (i = 0; i < elements.length; i++) {
+            elements[i].style.msFlex = "25%";  // IE10
+            elements[i].style.flex = "25%";
+          }
+        }
+        
+        // Add active class to the current button (highlight it)
+        var header = document.getElementById("myHeader");
+        var btns = header.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+        </script>
+
+</body>
+</html>

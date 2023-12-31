@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Roboto&family=Sometype+Mono&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: "Roboto";
+}
+
+body{
+    background-color: #34A7B2;
+}
+
+.head{
+    background-color: #5B2E35;
+    padding: 10px;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.main-nav ul li a{
+    text-decoration: none;
+}
+
+.main-nav ul li a:hover{
+    text-decoration: underline;
+    text-decoration-color: #F5E4C3;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+}
+.container h1{
+    font-family: "Inconsolata";
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.home{
+    height: calc(100vh - 53.6px);
+    display: grid;
+    place-items: center;
+}
+
+.home h1{
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 6px;
+}
+
+.letter{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.paper{
+    background-color: #fff;
+    box-shadow: 7px 8px 5px -1px rgba(0,0,0,0.43);
+    width: 48%;
+    margin: 7px;
+    min-height: 560px;
+    padding: 20px;
+}
+
+.paper p{
+    color:#000;
+    font-family: "Sometype Mono";
+    line-height: 2rem;
+    text-align: justify;
+}
+
